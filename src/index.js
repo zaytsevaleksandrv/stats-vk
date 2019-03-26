@@ -7,6 +7,7 @@ import configureStore from './stores/configureStore';
 import App from './components/App';
 import Main from './components/Main';
 import Test from './components/Test';
+import './styles/main.css'
 
 const store = configureStore();
 

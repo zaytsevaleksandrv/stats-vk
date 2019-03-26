@@ -2,7 +2,7 @@ import React from 'react';
 
 function Main({ tracks = [] }) {
     return (
-        <div>
+        <div className={'text text__center'}>
             gggg
         </div>
     );

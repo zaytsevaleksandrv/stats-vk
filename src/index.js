@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './stores/configureStore';
 import * as actions from './actions';
-import App from "./components/App.js";
+import Main from "./components/Main/";
 
 const tracks = [
     {
@@ -19,7 +19,7 @@ store.dispatch(actions.setTracks(tracks));
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Main />
     </Provider>,
     document.getElementById('root')
 );

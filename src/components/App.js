@@ -1,15 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import { connect } from "react-redux";
 
-import '../styles/App.css';
-
-class App extends Component {
-    render() {
+function App({ tracks = [] }) {
+  return (
+    <div>
+      {tracks.map((track, key) => {
         return (
-            <div>
-                <h1>My React App!</h1>
-            </div>
+          <div className="track" key={key}>
+            {track.title}
+          </div>
         );
-    }
+      })}
+    </div>
+  );
 }
 
-export default App;
+function mapStateToProps(state) {
+  const tracks = state.track;
+  return {
+    tracks
+  };
+}
+
+export default connect(mapStateToProps)(App);

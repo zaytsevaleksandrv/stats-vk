@@ -10,3 +10,27 @@ h1 {
     text-align: center;
   }
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &-primary {
+    background-color: #5181b8;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  &-small {
+    font-size: 14px;
+    color: #fff;
+    line-height: 14px;
+    font-weight: 500;
+    padding: 7px 15px;
+    border-radius: 15px;
+  }
+}

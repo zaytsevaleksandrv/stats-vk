@@ -7,6 +7,24 @@
     padding: 0;
     margin: 0;
   }
+  
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4bb34b;
+    min-height: 44px;
+    max-height: 44px;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
 }
 
 .list-group {

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router";
 import {
   View,
   Panel,
@@ -22,22 +23,15 @@ import "./style.css";
 const cn = block("main");
 
 export default class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activePanel: "brand"
-    };
-  }
-
   render() {
     return (
-      <View activePanel={this.state.activePanel}>
-        <Panel id="brand">
+      <View>
+        <Panel>
           <PanelHeader>Статистика Вконтакте</PanelHeader>
           <Div>
-            <Button size="xl" level="commerce">
-              Добавить группу/сообщество
-            </Button>
+            <Link to={"/add-group"} className={cn("btn")}>
+              Добавить группу / сообщество
+            </Link>
           </Div>
           <Group title={"Мои группы"}>
             <List>
@@ -73,7 +67,12 @@ export default class Main extends Component {
                         <span className={"list-group__item-text"}>5</span>
                       </li>
                     </ul>
-                    <Button size="m">Подробнее</Button>
+                    <Link
+                      to={"/group/1"}
+                      className={"btn btn-primary btn-small"}
+                    >
+                      Подробнее
+                    </Link>
                   </div>
                 }
               >
@@ -111,7 +110,12 @@ export default class Main extends Component {
                         <span className={"list-group__item-text"}>5</span>
                       </li>
                     </ul>
-                    <Button size="m">Подробнее</Button>
+                    <Link
+                      to={"/group/1"}
+                      className={"btn btn-primary btn-small"}
+                    >
+                      Подробнее
+                    </Link>
                   </div>
                 }
               >
@@ -149,7 +153,12 @@ export default class Main extends Component {
                         <span className={"list-group__item-text"}>5</span>
                       </li>
                     </ul>
-                    <Button size="m">Подробнее</Button>
+                    <Link
+                      to={"/group/1"}
+                      className={"btn btn-primary btn-small"}
+                    >
+                      Подробнее
+                    </Link>
                   </div>
                 }
               >
